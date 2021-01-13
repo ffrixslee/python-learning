@@ -5,7 +5,8 @@ Repository to store attempted python exercises
 Resources related to software engineering (and some thoughts)
 
 <b> Decision tables:</b>  
-https://www.hillelwayne.com/decision-tables/  
+https://www.hillelwayne.com/decision-tables/ 
+- Could decision tables be related to constraint solvers and model checkers ? 
 
 <b> Z3 solver: </b>  
 https://rise4fun.com/z3/tutorial 
