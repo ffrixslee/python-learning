@@ -1,5 +1,4 @@
 version: "2.0"
-
 nlu:
 - intent: greet
   examples: |
@@ -16,7 +15,8 @@ nlu:
     - goodmorning
     - goodevening
     - good afternoon
-
+    - Hi !
+    - Hi!
 - intent: goodbye
   examples: |
     - good afternoon
@@ -30,7 +30,7 @@ nlu:
     - see you around
     - bye bye
     - see you later
-
+    - bye!
 - intent: affirm
   examples: |
     - yes
@@ -39,7 +39,6 @@ nlu:
     - of course
     - that sounds good
     - correct
-
 - intent: deny
   examples: |
     - no
@@ -49,7 +48,6 @@ nlu:
     - don't like that
     - no way
     - not really
-
 - intent: mood_great
   examples: |
     - perfect
@@ -66,7 +64,8 @@ nlu:
     - so so perfect
     - so good
     - so perfect
-
+    - happy
+    - Great!
 - intent: mood_unhappy
   examples: |
     - my day was horrible
@@ -83,10 +82,38 @@ nlu:
     - extremly sad
     - so saad
     - so sad
-
 - intent: bot_challenge
   examples: |
     - are you a bot?
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+- intent: curious
+  examples: |
+    - What are you doing?
+
+- intent: request_restaurant
+  examples: |
+    - im looking for a restaurant
+    - can i get [swedish](cuisine) food in any area
+    - a restaurant that serves [caribbean](cuisine) food
+    - id like a restaurant
+    - im looking for a restaurant that serves [mediterranean](cuisine) food
+    - can i find a restaurant that serves [chinese](cuisine)
+
+- intent: inform
+  examples: |
+    - [afghan](cuisine) food
+    - how bout [asian oriental](cuisine)
+    - what about [indian](cuisine) food
+    - uh how about [turkish](cuisine) type of food
+    - um [english](cuisine)
+    - im looking for [tuscan](cuisine) food
+    - id like [moroccan](cuisine) food
+    - for ten people
+    - 2 people
+    - for three people
+    - just one person
+    - book for seven people
+    - 2 please
+    - nine people

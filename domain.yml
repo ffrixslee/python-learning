@@ -19,8 +19,28 @@ intents:
     use_entities: true
 - bot_challenge:
     use_entities: true
-entities: []
-slots: {}
+- request_restaurant:
+    use_entities: true
+- inform:
+    use_entities: true
+entities:
+  - cuisine
+  - number
+# []
+slots:
+  cuisine:
+    type: text
+    auto_fill: false
+    influence_conversation: false
+  num_people:
+    type: float
+    auto_fill: false
+    influence_conversation: false
+  outdoor_seating:
+    type: text
+    auto_fill: false
+    influence_conversation: false
+# {}
 responses:
   utter_greet:
   - text: Hey! How are you?
@@ -35,6 +55,36 @@ responses:
   - text: Bye
   utter_iamabot:
   - text: I am a bot, powered by Rasa.
-actions: []
-forms: {}
+  utter_ask_cuisine:
+    - text: "What cuisine?"
+  utter_ask_num_people:
+    - text: "How many people?"
+  utter_ask_outdoor_seating:
+    - text: "Do you want to sit outside?"
+  utter_submit:
+  - text: "All done!"
+  utter_slots_values:
+  - text: "I am going to run a restaurant search using the following parameters:\n
+            - cuisine: {cuisine}\n
+            - num_people: {num_people}\n
+            - outdoor_seating: {outdoor_seating}"
+actions: 
+- validate_restaurant_form
+# []
+forms: 
+  restaurant_form:
+    cuisine:
+      - type: from_entity
+        entity: cuisine
+    num_people:
+      - type: from_entity
+        entity: number
+    outdoor_seating:
+      - type: from_intent
+        intent: affirm
+        value: true
+      - type: from_intent
+        intent: deny
+        value: false
+# {}
 e2e_actions: []
