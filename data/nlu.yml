@@ -17,6 +17,7 @@ nlu:
     - good afternoon
     - Hi !
     - Hi!
+    - Yo!
 - intent: goodbye
   examples: |
     - good afternoon
@@ -117,3 +118,4 @@ nlu:
     - book for seven people
     - 2 please
     - nine people
+    - What are you up to?
